@@ -1,6 +1,20 @@
 {% extends 'pack/layout.html'%}
 
 {%block content%}
-<h3>PACKS, testing out new changes. IF this works git hub will be updated from both computers. Mac=Check </br>Windows=check</h3>
 
+<div class = "form_pack">
+    <h3>FORM PACK</h3>
+    <p>
+        <form action: "/pack/" method="POST">
+       
+         <label for "num_packs">Number of Packs:</label>
+         <input id = "num_pack" type="number">
+        </br>
+         <label for "cost_pack">Cost of Pack:</label>
+         <input id = "cost_pack" type="number">
+         </br>
+         <input type ="submit" value="submit">
+</form>
+    </p>
+</div>
 {% endblock %}
