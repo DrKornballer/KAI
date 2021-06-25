@@ -1,14 +1,18 @@
+from django.forms.forms import Form
 from django.shortcuts import render
 from .forms import packsForm
 
 # Create your views here.
 
 def packs_create(request):
-     form=packsForm(request.POST or None)
-     if form.is_valid():
-          form.save()
-     
-     return render(request, 'pack/index.htmnl')
-     
+    if request.method == "POST":
+        form = packsForm(request.POST)
+        if form.is_valid():
+            form.save(commit = True)
+    else:
+        form = packsForm()
+        return render(request, 'pack/index.html', {'form': form})
+
 def pack(request):
-     return render(request, 'pack/index.html')
+     form=packsForm(request.POST)
+     return render(request, 'pack/index.html', {'form': form})
