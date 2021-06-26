@@ -8,3 +8,4 @@ class packs (models.Model):
     num_packs = models.SmallIntegerField(max_length=10)
     cost_packs = models.DecimalField(max_digits=6, decimal_places=2)
 
+

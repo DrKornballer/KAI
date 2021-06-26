@@ -4,6 +4,7 @@ h1 {
     text-align: center;
     color:teal;
     border:dashed teal 4px;
+    border-radius: 4px;
 }
 
 h2 {
@@ -19,4 +20,8 @@ h2 {
 .form_pack {
     text-align: center;
 
+}
+
+.home_button{
+    text-align: center;
 }

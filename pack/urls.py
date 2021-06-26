@@ -6,3 +6,4 @@ urlpatterns = [
     path("", views.pack, name="index"),
     path("packs_create/", views.packs_create, name="packs")
 ]
+
