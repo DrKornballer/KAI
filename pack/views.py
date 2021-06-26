@@ -14,5 +14,10 @@ def packs_create(request):
         return render(request, 'pack/index.html', {'form': form})
 
 def pack(request):
-     form=packsForm(request.POST)
-     return render(request, 'pack/index.html', {'form': form})
+      if request.method == "POST":
+        form = packsForm(request.POST)
+        if form.is_valid():
+            form.save(commit = True)
+      else:
+        form = packsForm()
+        return render(request, 'pack/index.html', {'form': form})
