@@ -1,4 +1,3 @@
-from pack.views import packs_create
 from pack.models import packs
 from django.contrib import admin
 from .models import packs
