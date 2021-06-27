@@ -15,3 +15,23 @@ h2 {
         border:solid teal 4px;
         background-color: teal;
     }
+
+.smoked {
+    text-align: center;
+}
+
+#Now {
+    text-align: center;
+}
+
+#smoked_form{
+    text-align: center;
+}
+
+.home_button{
+    text-align: center;
+}
+
+#primary_home{
+    text-align: center;
+}
