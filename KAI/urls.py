@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from kkquit import views as home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('my_kai_web/', include("my_kai_web.urls")),
     path('kkquit/', include("kkquit.urls")),
-    path('pack/', include ("pack.urls"))
+    path('pack/', include ("pack.urls")),
+    path('', include ("kkquit.urls"))
    
-]
+    ]
